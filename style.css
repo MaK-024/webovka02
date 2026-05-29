@@ -263,26 +263,16 @@ html {
   scroll-behavior: smooth;
 }
 
-article {
-  scroll-margin-top: 240px;
-  max-width: 700px;
-  margin: auto;
-  line-height: 1.6;
-  display: flow-root; /* aby mi text neobtékal jiné  obrázky */
-  text-align: justify;
-/*    
-  min-height: 80vh;
-  padding: 60px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; */
-}
-
 article, .objednavka, footer {
   scroll-margin-top: 240px;
   max-width: 700px;
   margin: auto;
   line-height: 1.6;
+}
+
+article {
+  display: flow-root; /* aby mi text neobtékal jiné  obrázky */
+  text-align: justify;
 }
 
 /*
@@ -329,20 +319,16 @@ td {
   border-bottom: 1px solid var(--taupe);
 }
 
-/* --- pokus s hover efektem pro řádky tabulky
-    --- NEGUNGUJE ---
+/* --- hover efekt pro řádky tabulky --- */
 tr:hover {
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(217, 108, 74, 0.12); /* Jemný oranžový nádech s využitím var(--nd-orange) */
 }
-  */
 
 .portrait {
   transition: transform 0.3s ease;
   box-shadow: 3px 3px 8px rgba(0,0,0,0.25); /* stín */
-  
   width: 180px;
   border-radius: 4px;
-  transition: transform 0.3s ease;
 }
 
 /* --- první obrázek mi NĚKDE moc čouhá nahoru, tak posun níž 
@@ -382,4 +368,159 @@ tr:hover {
 /*  display: inline-block;    */
   animation: pulse 2s infinite;
   float: right;    
+}
+
+/* --- Styly pro formuláře --- */
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: rgba(242, 237, 227, 0.7); /* var(--nd-cream) s mírnou průhledností */
+  border: 1px solid var(--nd-tan);
+  border-radius: 8px;
+}
+
+#fanclub-form-container form {
+  max-width: 100%;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--nd-chocolate);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+table input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--nd-tan);
+  border-radius: 6px;
+  background-color: #fff;
+  color: var(--nd-chocolate);
+  font-family: "Inter", sans-serif;
+  font-size: 0.95em;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+table input[type="number"] {
+  width: 70px;
+  text-align: center;
+  padding: 6px;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+table input[type="number"]:focus {
+  outline: none;
+  border-color: var(--tomato-jam);
+  box-shadow: 0 0 0 3px rgba(195, 66, 63, 0.2);
+}
+
+form button,
+form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background-color: var(--tomato-jam);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background-color: var(--red);
+}
+
+form button:active,
+form input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* --- Mobilní responzivita --- */
+@media (max-width: 900px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  .page-wrapper {
+    box-shadow: none;
+    max-width: 100%;
+  }
+  footer {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    position: static; /* Aby nezabíral moc místa na mobilech */
+  }
+  
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+  .main-nav li {
+    flex: 1 1 33.33%;
+  }
+  .main-nav a {
+    padding: 8px 4px;
+    font-size: 0.9em;
+  }
+
+  .sec-nav ul {
+    flex-wrap: wrap;
+  }
+  .sec-nav li {
+    flex: 1 1 50%;
+  }
+  .sec-nav a {
+    padding: 8px 4px;
+    font-size: 0.9em;
+  }
+
+  article, .objednavka, footer {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .portrait {
+    float: none !important;
+    display: block;
+    margin: 15px auto !important;
+  }
+
+  table {
+    font-size: 0.85em;
+  }
+
+  th, td {
+    padding: 8px 6px;
+  }
+
+  table input[type="number"] {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav li {
+    flex: 1 1 50%;
+  }
 }
