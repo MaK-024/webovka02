@@ -1,12 +1,14 @@
 # Napoleon Dynamite – legenda z Prestonu v Idaho
 
-Jednoduchá webová prezentace vytvořená jako školní projekt z HTML a CSS.
+Školní projekt vytvořený pro procvičení HTML a CSS., upravený pomocí Antigravity. Přidány Napoleonovy hlášky, upravena tabulka s relikviemi. 
 
 ## Veřejná adresa webu
 
 Web je dostupný zde:
 
-https://mak-024.github.io/webovka01/
+https://mak-024.github.io/webovka02/
+
+Repozitář: https://github.com/mak-024/webovka02
 
 ## Téma webu
 
@@ -22,7 +24,7 @@ Webová prezentace obsahuje:
 - hlavní navigační menu,
 - odkazy do části vlastního dokumentu,
 - odkazy na jiné HTML dokumenty prezentace,
-- externí odkaz,
+- externí odkaz je na "webovce01"
 - obrázky,
 - tabulku,
 - formulář se vstupními políčky různého typu.
@@ -30,7 +32,7 @@ Webová prezentace obsahuje:
 ## Použité technologie
 
 - HTML5
-- CSS3
+- CSS
 - GitHub Pages
 
 ## Struktura webu
@@ -53,4 +55,4 @@ Obrázky obsahují atribut `alt`. Formulářová pole jsou propojena s popisky p
 
 ## Autor
 
-Školní projekt vytvořený pro procvičení HTML a CSS.
+Martin Kriššák, V2I
