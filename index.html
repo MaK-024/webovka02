@@ -52,6 +52,15 @@
             <article>
                 <p>Znáte Napoleona Dynamita? Ne? Ale to je chyba!</p>
             </article>
+
+            <!-- Generátor hlášek -->
+            <section id="quote-generator">
+                <h3>Napoleonova hláška dne</h3>
+                <div class="quote-box">
+                    <p id="quote-text">„Vote for Pedro!“</p>
+                </div>
+                <button id="quote-btn">Další hláška</button>
+            </section>
             
             <article id="section1">
                 <h2>Skillz</h2>
@@ -74,10 +83,38 @@
 
         <footer>
             <p>
-                <span class="copyleft">&copy;</span> 2026 Vote for Pedro! <a class="link-out" href="https://mak-024.github.io/webovka02/">&raquo; Antigravity edition &laquo;</a>
+                <span class="copyleft">&copy;</span> 2026 Vote for Pedro!
             </p>
         </footer>
     </div>
 
+    <script>
+        const quotes = [
+            "„Vote for Pedro!“",
+            "„Tina, ty tlustá lamo, pojď se nažrat!“",
+            "„Nic tak běžného, jako Computer hacking skillz nebo Numchuck skillz neumím. Ale vynikám v kresbě, tetherballu a tanci.“",
+            "„Vsadím se, že tvůj kluk neumí ulovit rosomáka.“",
+            "„Už ti někdy strýc Rico vyprávěl, jak hodil fotbalový míč přes tamty hory?“",
+            "„Pedro nabízí ochranu pro všechny vaše nejdivočejší sny!“",
+            "„Já dělám jen to, co se mi sakra zachce! Gosh!“",
+            "„Mým současným nejlepším trikem na kole je let na kole.“"
+        ];
+        
+        const quoteText = document.getElementById('quote-text');
+        const quoteBtn = document.getElementById('quote-btn');
+        
+        quoteBtn.addEventListener('click', () => {
+            quoteText.style.opacity = 0;
+            setTimeout(() => {
+                let randomQuote;
+                do {
+                    randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                } while (randomQuote === quoteText.innerText);
+                
+                quoteText.innerText = randomQuote;
+                quoteText.style.opacity = 1;
+            }, 250);
+        });
+    </script>
 </body>
 </html> 

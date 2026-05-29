@@ -214,9 +214,7 @@ h2, h3 {
   color: var(--light-gray);
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  transition:
-    background-color 0.4s,
-    color 0.4s;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .main-nav a.active {
@@ -227,6 +225,7 @@ h2, h3 {
 .main-nav a:hover {
   background-color: var(--red);
   color: white;
+  transform: translateY(-1px);
 }
 
 .sec-nav ul {
@@ -249,14 +248,13 @@ h2, h3 {
   color: white;
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  transition:
-    background-color 0.4s,
-    color 0.4s;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .sec-nav a:hover {
   background-color: var(--orange);
   color: #111;
+  transform: translateY(1px);
 }
 
 html {
@@ -304,6 +302,10 @@ table {
   border-collapse: collapse;
   margin: 30px 0;
   background-color: var(--paper-overlay);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--nd-tan);
 }
 
 th {
@@ -315,17 +317,17 @@ th {
 
 td {
   padding: 12px;
-
-  border-bottom: 1px solid var(--taupe);
+  border-bottom: 1px solid var(--nd-beige);
+  vertical-align: middle;
 }
 
 /* --- hover efekt pro řádky tabulky --- */
 tr:hover {
-  background-color: rgba(217, 108, 74, 0.12); /* Jemný oranžový nádech s využitím var(--nd-orange) */
+  background-color: rgba(217, 108, 74, 0.08);
 }
 
 .portrait {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 3px 3px 8px rgba(0,0,0,0.25); /* stín */
   width: 180px;
   border-radius: 4px;
@@ -349,12 +351,14 @@ tr:hover {
 
 /* --- lehké zvednutí a pootočení doprava --- */
 .left:hover {
-    transform: scale(1.03) rotate(-2deg);
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 6px 6px 14px rgba(0,0,0,0.35);
 }
 
 /* --- lehké zvednutí a pootočení doleva --- */
 .right:hover {
-    transform: scale(1.03) rotate(2deg);
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 6px 6px 14px rgba(0,0,0,0.35);
 }
 
 .poznamka {
@@ -450,6 +454,117 @@ form input[type="submit"]:hover {
 form button:active,
 form input[type="submit"]:active {
   transform: scale(0.98);
+}
+
+/* --- Generátor hlášek --- */
+#quote-generator {
+  text-align: center;
+  max-width: 700px;
+  margin: 35px auto;
+  padding: 20px;
+  background-color: var(--nd-cream);
+  border: 2px dashed var(--nd-tan);
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#quote-generator h3 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--nd-chocolate);
+  margin-bottom: 10px;
+}
+
+.quote-box {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#quote-text {
+  font-family: "Source Serif 4", serif;
+  font-style: italic;
+  font-size: 1.25em;
+  color: var(--nd-chocolate);
+  line-height: 1.4;
+  margin: 0;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+}
+
+#quote-btn {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#quote-btn:hover {
+  background-color: var(--dark-gray);
+}
+
+#quote-btn:active {
+  transform: scale(0.96);
+}
+
+/* --- Box celkové ceny --- */
+.total-price-box {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: var(--nd-cream);
+  border: 2px solid var(--nd-orange);
+  border-radius: 8px;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: var(--nd-chocolate);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#total-price {
+  color: var(--tomato-jam);
+}
+
+/* --- Štítky dostupnosti (Badges) --- */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.badge-stock {
+  background-color: rgba(142, 208, 129, 0.2);
+  color: #3d7932;
+  border: 1px solid rgba(142, 208, 129, 0.5);
+}
+
+.badge-few {
+  background-color: rgba(231, 162, 74, 0.2);
+  color: #a0631c;
+  border: 1px solid rgba(231, 162, 74, 0.5);
+}
+
+.badge-full {
+  background-color: rgba(93, 127, 192, 0.2);
+  color: #2b4f91;
+  border: 1px solid rgba(93, 127, 192, 0.5);
 }
 
 /* --- Mobilní responzivita --- */
