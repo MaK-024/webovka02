@@ -1,6 +1,6 @@
 # Napoleon Dynamite – legenda z Prestonu v Idaho
 
-Školní projekt vytvořený pro procvičení HTML a CSS., upravený pomocí Antigravity. Přidány Napoleonovy hlášky, upravena tabulka s relikviemi. 
+Školní projekt vytvořený pro procvičení HTML a CSS, upravený pomocí Antigravity. Přidány Napoleonovy hlášky, upravena tabulka s relikviemi a opraveny překlepy. 
 
 ## Veřejná adresa webu
 
