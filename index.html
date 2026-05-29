@@ -1,175 +1,83 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moje stránka | Moderní web</title>
-  <meta name="description" content="Ukázková moderní webová stránka s CSS animacemi a glassmorphism designem." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Kdo je Napoleon Dynamit?</title>
+    <meta name="description" content="Zde se dozvíte téměř vše o Napoleonovi Dynamitovi, jeho rodině, přátelích a okolí. Připojte se k fan clubu!">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="icon64.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="icon128.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="page-wrapper">
+        <header>
+            <!-- hlavní nabídka nad bannerem -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="active" href="index.html">Napoleon</a></li>
+                    <li><a href="family.html">Rodina</a></li>
+                    <li><a href="friends.html">Přátelé</a></li>
+                    <li><a href="other.html">Okolí</a></li>
+                    <li><a href="fan-club.html">Fan club</a></li>
+                    <li><a href="lipstick.html">Lipstick</a></li>
+                </ul>
+            </nav>
+            <!-- banner -->
+            <section class="banner">
+                <img src="picture/banner/banner-napoleon.webp" alt="banner Napoleon Dynamit">
+            </section>
 
-  <!-- ===== NAVIGACE ===== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <span class="logo-dot"></span>
-        <span>MůjWeb</span>
-      </a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#hero">Úvod</a></li>
-        <li><a href="#about">O mně</a></li>
-        <li><a href="#skills">Dovednosti</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu">
-        <span></span><span></span><span></span>
-      </button>
+            <!-- podnabídka pod bannerem -->
+            <nav class="sec-nav">
+                <ul>
+                    <li><a href="#section1">Skillz</a></li>
+                    <li><a href="#section2">Záliby</a></li>
+                    <li><a href="#section3">Kariéra</a></li>
+                    <li><a href="#section4">Kampaň</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            
+            <h1>
+                <a class="title-link" href="https://mak-024.github.io/webovka01/">
+                    <strong>Napoleon Dynamite</strong>
+                    <span class="subtitle">legenda z Prestonu v Idaho</span>
+                </a>
+            </h1>
+            <article>
+                <p>Znáte Napoleona Dynamita? Ne? Ale to je chyba!</p>
+            </article>
+            
+            <article id="section1">
+                <h2>Skillz</h2>
+                <p>Nic tak běžného, jako Computer hacking skillz nebo Numchuck skillz Napoleon neumí. Vyniká ale v kresbě, tetherballu, tanci a drezůře divokých, svatebních hřebců.</p>
+                <img src="Napoleon.gif" alt="Napoleon Dynamit" width="400" height="300">
+            </article>
+            <article id="section2">
+                <h2>Záliby</h2>
+                <p>Mezi Napoleonovi záliby určitě patří jízda na&nbsp;kole a&nbsp;to buď rekreačně s&nbsp;bratrem Kipem, tak i&nbsp;profesionálně s&nbsp;kamarádem Pedrem. Jeho současným nejlepším jízním trikem je let na&nbsp;kole. Jeho další oblíbenou kratochvílí je lov rosomáku u&nbsp;strýce na&nbsp;Aljašce.</p>
+            </article>
+            <article id="section3">
+                <h2>Kariéra</h2>
+                <p>Napoleon je zatím pouze student střední školy, ale už&nbsp;se&nbsp;zapojuje do&nbsp;místní ekonomiky. Začínal nejprve v&nbsp;místní drůbežárně, postupně se&nbsp;ale s&nbsp;kamádem Pedrem vypracoval na&nbsp;znalce místních krav.</p>
+            </article>
+            <article id="section4">
+                <h2>Kampaň</h2>
+                <p>Mohlo by se&nbsp;zdát, že ve&nbsp;volbách na&nbsp;školního prezidenta nemá Napoleonův kamarád Pedro velkou šanci. Summer Wheatley je favoritem voleb. Přesto se&nbsp;Pedro nevzdává a&nbsp;kampaň zahájí ve&nbsp;velkém stylu, po&nbsp;jižansku. Zahradní slavnost s&nbsp;piñatou podle Summer, do&nbsp;které se&nbsp;buší pálkou, se&nbsp;ale nezamlouvá řediteli školy. Jakmile se&nbsp;ale do&nbsp;volební kampaně pustí Napoleon, nemůže si&nbsp;být nikdo ničím jistý.</p>
+            </article>
+        </main>
+
+        <footer>
+            <p>
+                <span class="copyleft">&copy;</span> 2026 Vote for Pedro! <a class="link-out" href="https://mak-024.github.io/webovka02/">&raquo; Antigravity edition &laquo;</a>
+            </p>
+        </footer>
     </div>
-  </nav>
 
-  <!-- ===== HERO SEKCE ===== -->
-  <header class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-    </div>
-    <div class="hero-content">
-      <span class="hero-badge">✨ Vítejte</span>
-      <h1 class="hero-title">
-        Tvořím moderní<br />
-        <span class="gradient-text">digitální zážitky</span>
-      </h1>
-      <p class="hero-subtitle">
-        Jednoduchá, ale krásná webová stránka — příklad moderního CSS a HTML designu.
-      </p>
-      <div class="hero-actions">
-        <a href="#about" class="btn btn-primary" id="cta-about">Zjistit více</a>
-        <a href="#contact" class="btn btn-ghost" id="cta-contact">Kontaktujte mě</a>
-      </div>
-    </div>
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <span>Scrollujte dolů</span>
-      <div class="scroll-arrow"></div>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- ===== O MNĚ ===== -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-label">O mně</div>
-        <h2 class="section-title">Kdo jsem?</h2>
-        <div class="about-grid">
-          <div class="about-card glass-card">
-            <div class="card-icon">🎨</div>
-            <h3>Design</h3>
-            <p>Miluji čistý a funkční design, který dělá radost uživatelům.</p>
-          </div>
-          <div class="about-card glass-card">
-            <div class="card-icon">💻</div>
-            <h3>Kód</h3>
-            <p>Píšu čistý, přehledný kód s důrazem na výkon a přístupnost.</p>
-          </div>
-          <div class="about-card glass-card">
-            <div class="card-icon">🚀</div>
-            <h3>Výkon</h3>
-            <p>Optimalizuji weby tak, aby byly rychlé na každém zařízení.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== DOVEDNOSTI ===== -->
-    <section class="section section-dark" id="skills">
-      <div class="container">
-        <div class="section-label">Dovednosti</div>
-        <h2 class="section-title">Co umím?</h2>
-        <div class="skills-grid">
-          <div class="skill-item" id="skill-html">
-            <div class="skill-header">
-              <span class="skill-name">HTML5</span>
-              <span class="skill-percent">95%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--fill: 95%"></div>
-            </div>
-          </div>
-          <div class="skill-item" id="skill-css">
-            <div class="skill-header">
-              <span class="skill-name">CSS3</span>
-              <span class="skill-percent">90%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--fill: 90%"></div>
-            </div>
-          </div>
-          <div class="skill-item" id="skill-js">
-            <div class="skill-header">
-              <span class="skill-name">JavaScript</span>
-              <span class="skill-percent">80%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--fill: 80%"></div>
-            </div>
-          </div>
-          <div class="skill-item" id="skill-ux">
-            <div class="skill-header">
-              <span class="skill-name">UX Design</span>
-              <span class="skill-percent">75%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-fill" style="--fill: 75%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== KONTAKT ===== -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-label">Kontakt</div>
-        <h2 class="section-title">Napište mi</h2>
-        <form class="contact-form glass-card" id="contact-form" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Jméno</label>
-              <input type="text" id="name" name="name" placeholder="Jan Novák" required />
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="jan@email.cz" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="message">Zpráva</label>
-            <textarea id="message" name="message" rows="5" placeholder="Vaše zpráva..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="submit-btn">Odeslat zprávu →</button>
-          <p class="form-success" id="form-success" aria-live="polite">✅ Zpráva odeslána! Brzy se ozvu.</p>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== PATIČKA ===== -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 MůjWeb. Vytvořeno s ❤️ a čistým CSS. A hlavně s Antigravity :-)</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
-
-</html>
+</html> 
